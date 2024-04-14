@@ -12,7 +12,7 @@ export class APILogger {
     level: 'info',
     format: combine(
       // colorize({ all: true }),
-      label({ label: 'API Allas' }),
+      label({ label: 'TerraHub API' }),
       timestamp(),
       APILogger.formato
     ),

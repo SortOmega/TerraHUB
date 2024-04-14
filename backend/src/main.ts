@@ -4,6 +4,8 @@ import { AppModule } from './app.module';
 import * as bdParser from 'body-parser';
 import { ValidationPipe } from '@nestjs/common';
 import { APILogger } from './config/logger';
+import { SwaggerModule } from '@nestjs/swagger';
+import { swaggerConfig, swaggerCustomOptions } from './config/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
@@ -14,6 +16,9 @@ async function bootstrap() {
 
   app.use(bdParser.json({ limit: '1024mb' }));
   app.use(bdParser.urlencoded({ limit: '1024mb', extended: true }));
+
+  const document = SwaggerModule.createDocument(app, swaggerConfig);
+  SwaggerModule.setup('api', app, document, swaggerCustomOptions);
 
   app.useGlobalPipes(new ValidationPipe());
 
