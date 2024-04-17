@@ -7,6 +7,7 @@ export const swaggerConfig = new DocumentBuilder()
   )
   .setVersion('1')
   //LISTADO DE TAGS-------------------------------------------------------------
+  .addTag('API Inicial', 'Endpoints de prueba TerraHub.')
   .addTag(
     'Mantenimiento de Propiedades',
     'Endpoints para el mantenimiento de las propiedades inmobiliarias.'

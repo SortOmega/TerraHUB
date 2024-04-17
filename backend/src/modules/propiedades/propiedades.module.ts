@@ -7,6 +7,5 @@ import { DatabaseModule } from 'src/shared/modules/database/database.module';
   imports: [DatabaseModule],
   controllers: [PropiedadesController],
   providers: [PropiedadesService],
-  exports: [],
 })
 export class PropiedadesModule {}

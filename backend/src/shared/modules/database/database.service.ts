@@ -18,9 +18,9 @@ export class DatabaseService {
     const maximoMilisegundos = maximoMinutos * (60 * 1000);
 
     //inicializar la conexion a la base de datos
-    this.pg = new Pool(dbConfig);
+    this.pg = new Pool(dbConfig());
     this.pgLarge = new Pool({
-      ...dbConfig,
+      ...dbConfig(),
       keepAlive: true,
       idleTimeoutMillis: 1200000, // 20 minutos
       connectionTimeoutMillis: maximoMilisegundos,
