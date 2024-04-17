@@ -45,7 +45,7 @@ export class RegistrarPropiedadDTO implements RegistrarPropiedad {
     required: true,
     nullable: false,
   })
-  @IsEnum(TipoPropiedad)
+  @IsString()
   @IsNotEmpty()
   tipoPropiedadId: TipoPropiedad;
 
