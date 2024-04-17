@@ -34,7 +34,7 @@ export class DatabaseService {
     funcion: string,
     argumentos: unknown[] = [],
     funcOptions: DBFuncOptions = this.defaultPgFuncOptions
-  ) {
+  ): Promise<Response> {
     try {
       //Separrar el nombre de la funcion del esquema
       const keyFun: string = funcion.split('.')[1].toString();

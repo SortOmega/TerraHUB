@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from 'src/shared/modules/database/database.service';
+import { RegistrarPropiedadDTO } from './dtos/RegistrarPropiedad.dto';
 // import { CreatePropiedadesDto } from './dto/create-propiedades.dto';
 // import { UpdatePropiedadesDto } from './dto/update-propiedades.dto';
 
@@ -7,9 +8,30 @@ import { DatabaseService } from 'src/shared/modules/database/database.service';
 export class PropiedadesService {
   constructor(private dbService: DatabaseService) {}
 
+  obtenerEnumEtiquetasPropiedad = async () => {
+    return await this.dbService.pgFunc<EtiquetaPropiedad[]>(
+      'inmobiliaria.ft_obtener_enum_etiquetas',
+      []
+    );
+  };
+
+  obtenerListaEtiquetasSegunPropiedad = async (idPropiedad: string) => {
+    return await this.dbService.pgFunc<Propiedad[]>(
+      'inmobiliaria.ft_obtener_propiedades_por_tipo',
+      [idPropiedad]
+    );
+  };
+
   obtenerListaPropiedadesPorTipo = async (idTipoPropiedad: TipoPropiedad) => {
-    return await this.dbService.pgFunc('inmobiliaria.ft_obtener_propiedades_por_tipo', [
-      idTipoPropiedad,
+    return await this.dbService.pgFunc<Propiedad[]>(
+      'inmobiliaria.ft_obtener_propiedades_por_tipo',
+      [idTipoPropiedad]
+    );
+  };
+
+  registrarPropiedad = async (body: RegistrarPropiedadDTO) => {
+    return await this.dbService.pgFunc<Propiedad>('inmobiliaria.ft_registrar_propiedad', [
+      JSON.stringify(body),
     ]);
   };
 }
