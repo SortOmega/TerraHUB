@@ -6,4 +6,12 @@ import { ApiTags } from '@nestjs/swagger';
 @Controller('clientes')
 export class ClientesController {
   constructor(private readonly clientesService: ClientesService) {}
+
+  //#region GET
+  @Get('/tipoCliente')
+  async obtenerEnumTiposCliente() {
+    return await this.clientesService.obtenerEnumTiposCliente();
+  }
+
+  //#endregion GET
 }
