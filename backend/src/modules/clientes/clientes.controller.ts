@@ -2,6 +2,7 @@ import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/commo
 import { ClientesService } from './clientes.service';
 import { ApiTags } from '@nestjs/swagger';
 import { ActualizarClienteDTO } from './dtos/ActualizarCliente.dto';
+import { RegistrarClienteDTO } from './dtos/RegistrarCliente.dto';
 
 @ApiTags('Mantenimiento de Clientes')
 @Controller('clientes')
@@ -23,7 +24,7 @@ export class ClientesController {
 
   //#region POST
   @Post('/registrarCliente')
-  async registrarCliente(@Body() body: any) {
+  async registrarCliente(@Body() body: RegistrarClienteDTO) {
     return await this.clientesService.registrarCliente(body);
   }
 
