@@ -1,6 +1,7 @@
 import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import { ClientesService } from './clientes.service';
 import { ApiTags } from '@nestjs/swagger';
+import { ActualizarClienteDTO } from './dtos/ActualizarCliente.dto';
 
 @ApiTags('Mantenimiento de Clientes')
 @Controller('clientes')
@@ -13,5 +14,26 @@ export class ClientesController {
     return await this.clientesService.obtenerEnumTiposCliente();
   }
 
+  @Get('/listaClientes')
+  async obtenerListaClientes() {
+    return await this.clientesService.obtenerListaClientes();
+  }
+
   //#endregion GET
+
+  //#region POST
+  @Post('/registrarCliente')
+  async registrarCliente(@Body() body: any) {
+    return await this.clientesService.registrarCliente(body);
+  }
+
+  //#endregion POST
+
+  //#region PATCH
+  @Patch('/actualizarCliente')
+  async actualizarCliente(@Body() body: ActualizarClienteDTO) {
+    return await this.clientesService.actualizarCliente(body);
+  }
+
+  //#endregion PATCH
 }
