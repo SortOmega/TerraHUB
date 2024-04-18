@@ -4,6 +4,7 @@ import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/commo
 import { PropiedadesService } from './propiedades.service';
 import { ApiTags } from '@nestjs/swagger';
 import { RegistrarPropiedadDTO } from './dtos/RegistrarPropiedad.dto';
+import { ActualizarPropiedadDTO } from './dtos/ActualizarPropiedad.dto';
 
 @ApiTags('Mantenimiento de Propiedades')
 @Controller('propiedades')
@@ -34,4 +35,11 @@ export class PropiedadesController {
     return await this.propiedadesService.registrarPropiedad(body);
   }
   //#endregion POST
+
+  //#region PATCH
+
+  @Patch('/actualizarPropiedad')
+  async actualizarPropiedad(@Body() body: ActualizarPropiedadDTO) {
+    return await this.propiedadesService.actualizarPropiedad(body);
+  }
 }

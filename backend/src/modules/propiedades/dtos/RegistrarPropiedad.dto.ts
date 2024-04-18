@@ -15,7 +15,7 @@ import {
 import { EtiquetaDTO } from './Etiqueta.dto';
 import { Type } from 'class-transformer';
 
-interface RegistrarPropiedad {
+export interface RegistrarPropiedad {
   descripcion: string;
   tipoPropiedadId: TipoPropiedad;
   propietarioId: string;

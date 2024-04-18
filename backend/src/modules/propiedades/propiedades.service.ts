@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from 'src/shared/modules/database/database.service';
 import { RegistrarPropiedadDTO } from './dtos/RegistrarPropiedad.dto';
+import { ActualizarPropiedadDTO } from './dtos/ActualizarPropiedad.dto';
 // import { CreatePropiedadesDto } from './dto/create-propiedades.dto';
 // import { UpdatePropiedadesDto } from './dto/update-propiedades.dto';
 
@@ -31,6 +32,12 @@ export class PropiedadesService {
 
   registrarPropiedad = async (body: RegistrarPropiedadDTO) => {
     return await this.dbService.pgFunc<Propiedad>('inmobiliaria.ft_registrar_propiedad', [
+      JSON.stringify(body),
+    ]);
+  };
+
+  actualizarPropiedad = async (body: ActualizarPropiedadDTO) => {
+    return await this.dbService.pgFunc<boolean>('inmobiliaria.ft_actualizar_propiedad', [
       JSON.stringify(body),
     ]);
   };
