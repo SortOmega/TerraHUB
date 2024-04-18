@@ -1,10 +1,18 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsNotEmpty, IsOptional, IsString, Max, MaxLength, MinLength } from 'class-validator';
+import {
+  IsNotEmpty,
+  IsNumber,
+  IsOptional,
+  IsString,
+  Max,
+  MaxLength,
+  MinLength,
+} from 'class-validator';
 
 export class EtiquetaDTO {
   @ApiProperty({
     description: 'Id de la propiedad',
-    example: 'Casa',
+    example: 'ETfwafgwax',
     required: true,
     nullable: false,
   })
@@ -17,13 +25,11 @@ export class EtiquetaDTO {
   //----------------------------------------------
   @ApiProperty({
     description: 'Cantidad de elementos según descripción de la etiqueta',
-    example: 'Casa',
+    example: 2,
     required: false,
     nullable: true,
   })
-  @IsString()
-  @MinLength(10)
-  @MaxLength(10)
+  @IsNumber()
   @IsOptional()
   cantidad: string;
 }
