@@ -1,4 +1,4 @@
-enum TipoPropiedad {
+enum EnumTipoPropiedad {
   VENTA = 'TPR-VENT',
   ALQUILER = 'TPR-ALQU',
   COMPRA = 'TPR-COMP',
@@ -13,6 +13,11 @@ interface EtiquetaPropiedad {
 interface EtiquetaPropiedadLinked extends EtiquetaPropiedad {
   propiedadId: string;
   cantidad: number;
+}
+
+interface TipoPropiedad {
+  tipoPropiedadId: EnumTipoPropiedad;
+  descripcion: string;
 }
 
 interface Propiedad {

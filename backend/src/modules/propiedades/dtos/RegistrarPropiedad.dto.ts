@@ -17,7 +17,7 @@ import { Type } from 'class-transformer';
 
 export interface RegistrarPropiedad {
   descripcion: string;
-  tipoPropiedadId: TipoPropiedad;
+  tipoPropiedadId: EnumTipoPropiedad;
   propietarioId: string;
   urlImagen: string;
   pais: string;
@@ -47,7 +47,7 @@ export class RegistrarPropiedadDTO implements RegistrarPropiedad {
   })
   @IsString()
   @IsNotEmpty()
-  tipoPropiedadId: TipoPropiedad;
+  tipoPropiedadId: EnumTipoPropiedad;
 
   //----------------------------------------------
   @ApiProperty({

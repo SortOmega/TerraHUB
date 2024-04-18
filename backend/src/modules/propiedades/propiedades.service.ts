@@ -16,6 +16,13 @@ export class PropiedadesService {
     );
   };
 
+  obtenerEnumTiposPropiedad = async () => {
+    return await this.dbService.pgFunc<TipoPropiedad[]>(
+      'inmobiliaria.ft_obtener_enum_tipo_propiedad',
+      []
+    );
+  };
+
   obtenerListaEtiquetasSegunPropiedad = async (idPropiedad: string) => {
     return await this.dbService.pgFunc<Propiedad[]>(
       'inmobiliaria.ft_obtener_propiedades_por_tipo',
@@ -23,7 +30,7 @@ export class PropiedadesService {
     );
   };
 
-  obtenerListaPropiedadesPorTipo = async (idTipoPropiedad: TipoPropiedad) => {
+  obtenerListaPropiedadesPorTipo = async (idTipoPropiedad: EnumTipoPropiedad) => {
     return await this.dbService.pgFunc<Propiedad[]>(
       'inmobiliaria.ft_obtener_propiedades_por_tipo',
       [idTipoPropiedad]

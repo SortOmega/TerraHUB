@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/commo
 // import { CreatePropiedadesDto } from './dto/create-propiedades.dto';
 // import { UpdatePropiedadesDto } from './dto/update-propiedades.dto';
 import { PropiedadesService } from './propiedades.service';
-import { ApiTags } from '@nestjs/swagger';
+import { ApiResponse, ApiTags } from '@nestjs/swagger';
 import { RegistrarPropiedadDTO } from './dtos/RegistrarPropiedad.dto';
 import { ActualizarPropiedadDTO } from './dtos/ActualizarPropiedad.dto';
 
@@ -13,13 +13,20 @@ export class PropiedadesController {
 
   //#region GET
   @Get('/tipoPropiedad/:idTipoPropiedad')
-  async obtenerListaPropiedadesPorTipo(@Param('idTipoPropiedad') idTipoPropiedad: TipoPropiedad) {
+  async obtenerListaPropiedadesPorTipo(
+    @Param('idTipoPropiedad') idTipoPropiedad: EnumTipoPropiedad
+  ) {
     return await this.propiedadesService.obtenerListaPropiedadesPorTipo(idTipoPropiedad);
   }
 
   @Get('/etiquetas')
   async obtenerEnumEtiquetasPropiedad() {
     return await this.propiedadesService.obtenerEnumEtiquetasPropiedad();
+  }
+
+  @Get('/tipoPropiedad')
+  async obtenerEnumTiposPropiedad() {
+    return await this.propiedadesService.obtenerEnumTiposPropiedad();
   }
 
   @Get('/etiquetas/:idPropiedad')
