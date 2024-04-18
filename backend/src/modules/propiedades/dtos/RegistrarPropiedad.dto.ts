@@ -120,6 +120,7 @@ export class RegistrarPropiedadDTO implements RegistrarPropiedad {
   //----------------------------------------------
   @ApiProperty({
     description: 'Lista de etiquetas de la propiedad',
+    example: [{ etiquetaId: 'ETede51d56', cantidad: '2' }],
     required: false,
     nullable: true,
   })
