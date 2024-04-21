@@ -14,6 +14,10 @@ export const swaggerConfig = new DocumentBuilder()
   )
   .addTag('Mantenimiento de Clientes', 'Endpoints para el mantenimiento de los clientes.')
   .addTag('Mantenimiento de Contratos', 'Endpoints para el mantenimiento de los contratos.')
+  .addTag(
+    'Mantenimiento de Planilla',
+    'Endpoints para el mantenimiento de la planilla y empleados del organigrama.'
+  )
   .addBearerAuth()
   //FINALIZA CONFIGURACION------------------------------------------------------
   .build();
