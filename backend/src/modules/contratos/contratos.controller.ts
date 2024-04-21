@@ -6,4 +6,9 @@ import { ApiTags } from '@nestjs/swagger';
 @Controller('contratos')
 export class ContratosController {
   constructor(private readonly contratosService: ContratosService) {}
+
+  @Get('/lista-solicitudes-clientes')
+  async obtenerListaSolicitudesClientes() {
+    return await this.contratosService.obtenerListaSolicitudesClientes();
+  }
 }
