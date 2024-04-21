@@ -6,6 +6,8 @@ import { LoggerMiddleware } from './shared/middlewares/logger-middleware';
 import { PropiedadesModule } from './modules/propiedades/propiedades.module';
 import { DatabaseModule } from './shared/modules/database/database.module';
 import { ClientesModule } from './modules/clientes/clientes.module';
+import { ContratosModule } from './modules/contratos/contratos.module';
+import { PlanillaModule } from './modules/planilla/planilla.module';
 
 @Module({
   imports: [
@@ -13,6 +15,8 @@ import { ClientesModule } from './modules/clientes/clientes.module';
     DatabaseModule,
     PropiedadesModule,
     ClientesModule,
+    ContratosModule,
+    PlanillaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
