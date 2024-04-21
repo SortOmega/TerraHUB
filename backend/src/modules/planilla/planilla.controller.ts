@@ -7,7 +7,7 @@ import { PlanillaService } from './planilla.service';
 export class PlanillaController {
   constructor(private readonly planillaService: PlanillaService) {}
 
-  @Get('/lista-empleados')
+  @Get('/listaEmpleados')
   async obtenerListaEmpleados() {
     return await this.planillaService.obtenerListaEmpleados();
   }
