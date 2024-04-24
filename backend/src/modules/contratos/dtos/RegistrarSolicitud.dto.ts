@@ -84,8 +84,6 @@ export class RegistrarSolicitudDTO implements RegistrarSolicitud {
     nullable: false,
   })
   @IsString()
-  @MinLength(10)
-  @MaxLength(10)
   @IsNotEmpty()
   tipoSolicitudId: string;
 }
