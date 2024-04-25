@@ -1,6 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
   IsDate,
+  IsDateString,
   IsNotEmpty,
   IsNumber,
   IsOptional,
@@ -25,7 +26,7 @@ export class RegistrarVentaDTO implements RegistrarVenta {
     required: true,
     nullable: false,
   })
-  @IsDate()
+  @IsDateString()
   @IsNotEmpty()
   fecha: Date;
 
