@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from 'src/shared/modules/database/database.service';
 import { RegistrarSolicitudDTO } from './dtos/RegistrarSolicitud.dto';
+import { RegistrarVenta, RegistrarVentaDTO } from './dtos/RegistrarVenta.dto';
 
 @Injectable()
 export class ContratosService {
@@ -18,5 +19,18 @@ export class ContratosService {
       'contratos.ft_registrar_solicitud_cliente',
       [JSON.stringify(body)]
     );
+  };
+
+  obtenerListaVentasInmuebles = async () => {
+    return await this.dbService.pgFunc<VentaInmueble[]>(
+      'contratos.ft_obtener_ventas_inmuebles',
+      []
+    );
+  };
+
+  registrarVentaInmueble = async (body: RegistrarVentaDTO) => {
+    return await this.dbService.pgFunc<boolean>('contratos.ft_registrar_venta_inmueble', [
+      JSON.stringify(body),
+    ]);
   };
 }

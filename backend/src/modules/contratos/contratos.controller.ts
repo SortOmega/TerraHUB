@@ -2,6 +2,7 @@ import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/commo
 import { ContratosService } from './contratos.service';
 import { ApiTags } from '@nestjs/swagger';
 import { RegistrarSolicitudDTO } from './dtos/RegistrarSolicitud.dto';
+import { RegistrarVentaDTO } from './dtos/RegistrarVenta.dto';
 
 @ApiTags('Mantenimiento de Contratos')
 @Controller('contratos')
@@ -16,10 +17,24 @@ export class ContratosController {
 
   //#endregion GET
 
+  @Get('/listaVentasInmuebles')
+  async obtenerListaVentasInmuebles() {
+    return await this.contratosService.obtenerListaVentasInmuebles();
+  }
+
+  //#endregion GET
+
   //#region POST
 
   @Post('/registrarSolicitudCliente')
   async registrarSolicitudCliente(@Body() body: RegistrarSolicitudDTO) {
     return await this.contratosService.registrarSolicitudCliente(body);
   }
+
+  @Post('/registrarVentaInmueble')
+  async registrarVentaInmueble(@Body() body: RegistrarVentaDTO) {
+    return await this.contratosService.registrarVentaInmueble(body);
+  }
+
+  //#endregion POST
 }
