@@ -14,3 +14,17 @@ interface SolicitudInmueble {
   fechaProcesada: Date;
   empleadoTerminoSolicitud: string;
 }
+
+interface VentaInmueble {
+  ventaId: string;
+  fechaVenta: Date;
+  propiedadId: string;
+  descripcionPropiedad: string;
+  precioVenta: number;
+  propietarioAntiguoId: string;
+  nombrePropietarioAntiguo: string;
+  propietarioNuevoId: string;
+  nombrePropietarioNuevo: string;
+  empleadoVendedorId: string;
+  nombreEmpleadoVendedor: string;
+}
