@@ -28,3 +28,17 @@ interface VentaInmueble {
   empleadoVendedorId: string;
   nombreEmpleadoVendedor: string;
 }
+
+interface CompraInmueble {
+  compraId: string;
+  fechaCompra: Date;
+  propiedadId: string;
+  descripcionPropiedad: string;
+  precioCompra: number;
+  propietarioAntiguoId: string;
+  nombrePropietarioAntiguo: string;
+  propietarioNuevoId: string;
+  nombrePropietarioNuevo: string;
+  empleadoCompradorId: string;
+  nombreEmpleadoComprador: string;
+}
