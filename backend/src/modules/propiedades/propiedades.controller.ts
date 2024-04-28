@@ -12,6 +12,17 @@ export class PropiedadesController {
   constructor(private readonly propiedadesService: PropiedadesService) {}
 
   //#region GET
+
+  @Get()
+  async obtenerListaPropiedades() {
+    return await this.propiedadesService.obtenerListaPropiedades();
+  }
+
+  @Get('/:idPropiedad')
+  async obtenerPropiedad(@Param('idPropiedad') idPropiedad: string) {
+    return await this.propiedadesService.obtenerPropiedad(idPropiedad);
+  }
+
   @Get('/tipoPropiedad/:idTipoPropiedad')
   async obtenerListaPropiedadesPorTipo(
     @Param('idTipoPropiedad') idTipoPropiedad: EnumTipoPropiedad

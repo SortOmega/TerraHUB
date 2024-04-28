@@ -30,6 +30,16 @@ export class PropiedadesService {
     );
   };
 
+  obtenerPropiedad = async (idPropiedad: string) => {
+    return await this.dbService.pgFunc<Propiedad>('inmobiliaria.ft_obtener_propiedad', [
+      idPropiedad,
+    ]);
+  };
+
+  obtenerListaPropiedades = async () => {
+    return await this.dbService.pgFunc<Propiedad[]>('inmobiliaria.ft_obtener_propiedades', []);
+  };
+
   obtenerListaPropiedadesPorTipo = async (idTipoPropiedad: EnumTipoPropiedad) => {
     return await this.dbService.pgFunc<Propiedad[]>(
       'inmobiliaria.ft_obtener_propiedades_por_tipo',
