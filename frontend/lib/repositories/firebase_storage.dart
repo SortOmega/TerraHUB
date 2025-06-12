@@ -1,5 +1,4 @@
 import 'dart:typed_data';
-
 import 'package:firebase_storage/firebase_storage.dart';
 
 Future<String?> uploadImage(Uint8List image, String folder) async {

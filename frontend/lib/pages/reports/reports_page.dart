@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:terrahub/shared/routes.dart';
-import 'package:terrahub/styles/text_styles.dart';
-import 'package:terrahub/widgets/menu_item.dart';
+import 'package:frontend/shared/routes.dart';
+import 'package:frontend/styles/text_styles.dart';
+import 'package:frontend/widgets/menu_item.dart';
 
 final storage = GetStorage();
 

@@ -1,26 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:terrahub/models/estate_model.dart';
-import 'package:terrahub/pages/Home/home_page.dart';
-import 'package:terrahub/pages/estate/info_estate_page.dart';
-
-import 'package:terrahub/pages/hub/hub_page.dart';
-import 'package:terrahub/pages/hub/internal%20pages/buys_pages/buys_page.dart';
-import 'package:terrahub/pages/hub/internal%20pages/buys_pages/create_buys_page.dart';
-import 'package:terrahub/pages/hub/internal%20pages/estate_pages/create_estate_page.dart';
-import 'package:terrahub/pages/hub/internal%20pages/estate_pages/estate_page.dart';
-import 'package:terrahub/pages/hub/internal%20pages/request_pages/request_manage_page.dart';
-import 'package:terrahub/pages/hub/internal%20pages/request_pages/request_page.dart';
-import 'package:terrahub/pages/hub/internal%20pages/sales_pages/create_sales_page.dart';
-import 'package:terrahub/pages/hub/internal%20pages/sales_pages/sales_page.dart';
-import 'package:terrahub/pages/login/login_page.dart';
-import 'package:terrahub/pages/reports/internal_pages/buys_reports.dart';
-import 'package:terrahub/pages/reports/internal_pages/minimun_demand_reports.dart';
-import 'package:terrahub/pages/reports/internal_pages/operational_evaluation.dart';
-import 'package:terrahub/pages/reports/internal_pages/performance_reports.dart';
-import 'package:terrahub/pages/reports/internal_pages/sales_performance.dart';
-import 'package:terrahub/pages/reports/internal_pages/sales_reports.dart';
-import 'package:terrahub/pages/reports/reports_page.dart';
-import 'package:terrahub/shared/routes.dart';
+import 'package:frontend/models/estate_model.dart';
+import 'package:frontend/pages/Home/home_page.dart';
+import 'package:frontend/pages/estate/info_estate_page.dart';
+import 'package:frontend/pages/hub/hub_page.dart';
+import 'package:frontend/pages/hub/internal%20pages/buys_pages/buys_page.dart';
+import 'package:frontend/pages/hub/internal%20pages/buys_pages/create_buys_page.dart';
+import 'package:frontend/pages/hub/internal%20pages/estate_pages/create_estate_page.dart';
+import 'package:frontend/pages/hub/internal%20pages/estate_pages/estate_page.dart';
+import 'package:frontend/pages/hub/internal%20pages/request_pages/request_manage_page.dart';
+import 'package:frontend/pages/hub/internal%20pages/request_pages/request_page.dart';
+import 'package:frontend/pages/hub/internal%20pages/sales_pages/create_sales_page.dart';
+import 'package:frontend/pages/hub/internal%20pages/sales_pages/sales_page.dart';
+import 'package:frontend/pages/login/login_page.dart';
+import 'package:frontend/pages/reports/internal_pages/buys_reports.dart';
+import 'package:frontend/pages/reports/internal_pages/minimun_demand_reports.dart';
+import 'package:frontend/pages/reports/internal_pages/operational_evaluation.dart';
+import 'package:frontend/pages/reports/internal_pages/performance_reports.dart';
+import 'package:frontend/pages/reports/internal_pages/sales_performance.dart';
+import 'package:frontend/pages/reports/internal_pages/sales_reports.dart';
+import 'package:frontend/pages/reports/reports_page.dart';
+import 'package:frontend/shared/routes.dart';
 
 final redirect = {
   Routes.home: (context) => const HomePage(),

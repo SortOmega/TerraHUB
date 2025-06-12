@@ -4,7 +4,7 @@ import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart
 import 'package:fwfh_webview/fwfh_webview.dart';
 import 'package:flutter_to_pdf/flutter_to_pdf.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:terrahub/shared/routes.dart';
+import 'package:frontend/shared/routes.dart';
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
 

@@ -1,14 +1,30 @@
 name: frontend
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.2.3 <4.0.0'
+  sdk: ">=3.2.3 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  get: ^4.6.6
+  get_storage: ^2.1.1
+  firebase_core: ^2.30.0
+  firebase_auth: ^4.17.0
+  url_strategy: ^0.2.0
+  font_awesome_flutter: ^10.7.0
+  intl: ^0.18.1
+  cached_network_image: ^3.3.1
+  image_picker: ^0.8.7+5
+  image_cropper: ^3.0.1
+  firebase_storage: ^11.2.2
+  webview_flutter: ^2.0.4
+  flutter_widget_from_html_core: ^0.9.0
+  fwfh_webview: ^0.6.0
+  flutter_to_pdf: ^0.2.0
+  quickalert: ^1.0.2
 
 dev_dependencies:
   flutter_test:

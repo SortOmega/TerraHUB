@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:terrahub/models/request_model.dart';
-import 'package:terrahub/shared/routes.dart';
-import 'package:terrahub/styles/text_styles.dart';
-import 'package:terrahub/widgets/ink_buttons.dart';
+import 'package:frontend/models/request_model.dart';
+import 'package:frontend/shared/routes.dart';
+import 'package:frontend/styles/text_styles.dart';
+import 'package:frontend/widgets/ink_buttons.dart';
 
 // ignore: must_be_immutable
 class RequestRow extends StatelessWidget {

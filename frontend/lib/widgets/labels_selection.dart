@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:terrahub/models/estate_model.dart';
-import 'package:terrahub/repositories/terrahub_api.dart';
+import 'package:frontend/models/estate_model.dart';
+import 'package:frontend/repositories/terrahub_api.dart';
 
 // ignore: must_be_immutable
 class LabelSelection extends StatelessWidget {

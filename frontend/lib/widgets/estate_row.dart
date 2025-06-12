@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:terrahub/models/estate_model.dart';
-import 'package:terrahub/shared/routes.dart';
-import 'package:terrahub/styles/text_styles.dart';
+import 'package:frontend/models/estate_model.dart';
+import 'package:frontend/shared/routes.dart';
+import 'package:frontend/styles/text_styles.dart';
 import 'package:cached_network_image/cached_network_image.dart';
-import 'package:terrahub/widgets/ink_buttons.dart';
+import 'package:frontend/widgets/ink_buttons.dart';
 import 'package:intl/intl.dart';
 
 class EstateRow extends StatelessWidget {

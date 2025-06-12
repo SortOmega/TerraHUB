@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:terrahub/shared/routes.dart';
-import 'package:terrahub/styles/text_styles.dart';
-import 'package:terrahub/widgets/text_field_form.dart';
+import 'package:frontend/shared/routes.dart';
+import 'package:frontend/styles/text_styles.dart';
+import 'package:frontend/widgets/text_field_form.dart';
 import 'package:quickalert/quickalert.dart';
 
 class LoginPage extends StatelessWidget {

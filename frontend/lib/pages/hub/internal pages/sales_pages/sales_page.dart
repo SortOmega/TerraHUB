@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:terrahub/models/sales_model.dart';
-import 'package:terrahub/repositories/terrahub_api.dart';
-import 'package:terrahub/shared/routes.dart';
-import 'package:terrahub/styles/text_styles.dart';
-import 'package:terrahub/widgets/ink_buttons.dart';
-import 'package:terrahub/widgets/sale_row.dart';
+import 'package:frontend/models/sales_model.dart';
+import 'package:frontend/repositories/terrahub_api.dart';
+import 'package:frontend/shared/routes.dart';
+import 'package:frontend/styles/text_styles.dart';
+import 'package:frontend/widgets/ink_buttons.dart';
+import 'package:frontend/widgets/sale_row.dart';
 
 class SalesPage extends StatelessWidget {
   SalesPage({super.key});

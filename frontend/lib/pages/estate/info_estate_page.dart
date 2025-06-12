@@ -4,8 +4,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:intl/intl.dart';
-import 'package:terrahub/models/estate_model.dart';
-import 'package:terrahub/styles/text_styles.dart';
+import 'package:frontend/models/estate_model.dart';
+import 'package:frontend/styles/text_styles.dart';
 
 class EstateInfoPage extends StatelessWidget {
   EstateInfoPage({

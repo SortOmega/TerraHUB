@@ -6,14 +6,14 @@ import 'package:get/utils.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:intl/intl.dart';
 import 'package:quickalert/quickalert.dart';
-import 'package:terrahub/models/buys_model.dart';
-import 'package:terrahub/models/employee_model.dart';
-import 'package:terrahub/models/estate_model.dart';
-import 'package:terrahub/repositories/terrahub_api.dart';
-import 'package:terrahub/shared/routes.dart';
-import 'package:terrahub/styles/text_styles.dart';
-import 'package:terrahub/widgets/button_drop_down.dart';
-import 'package:terrahub/widgets/text_field_form.dart';
+import 'package:frontend/models/buys_model.dart';
+import 'package:frontend/models/employee_model.dart';
+import 'package:frontend/models/estate_model.dart';
+import 'package:frontend/repositories/terrahub_api.dart';
+import 'package:frontend/shared/routes.dart';
+import 'package:frontend/styles/text_styles.dart';
+import 'package:frontend/widgets/button_drop_down.dart';
+import 'package:frontend/widgets/text_field_form.dart';
 
 // ignore: must_be_immutable
 class CreateBuysPage extends StatelessWidget {

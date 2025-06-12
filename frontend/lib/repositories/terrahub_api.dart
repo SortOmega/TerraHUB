@@ -1,19 +1,19 @@
 import 'package:http/http.dart' as http;
-import 'package:terrahub/models/buys_model.dart';
-import 'package:terrahub/models/estate_model.dart';
-import 'package:terrahub/models/client_model.dart';
-import 'package:terrahub/models/employee_model.dart';
+import 'package:frontend/models/buys_model.dart';
+import 'package:frontend/models/estate_model.dart';
+import 'package:frontend/models/client_model.dart';
+import 'package:frontend/models/employee_model.dart';
 import 'dart:convert';
-import 'package:terrahub/models/request_model.dart';
-import 'package:terrahub/models/sales_model.dart';
+import 'package:frontend/models/request_model.dart';
+import 'package:frontend/models/sales_model.dart';
 
 class TerrahubAPI {
   Future<List<Estate>> getEstates() async {
     List<Estate> estatesList = [];
 
     List<String> urls = [
-      'https://terrahub-production.up.railway.app/propiedades/tipoPropiedad/TPR-ALQU',
-      'https://terrahub-production.up.railway.app/propiedades/tipoPropiedad/TPR-VENT'
+      'https://frontend-production.up.railway.app/propiedades/tipoPropiedad/TPR-ALQU',
+      'https://frontend-production.up.railway.app/propiedades/tipoPropiedad/TPR-VENT'
     ];
 
     List<http.Response> responses =
@@ -36,7 +36,7 @@ class TerrahubAPI {
     List<EtiquetaPropiedad> labelsList = [];
 
     String url =
-        'https://terrahub-production.up.railway.app/propiedades/etiquetas';
+        'https://frontend-production.up.railway.app/propiedades/etiquetas';
 
     http.Response response = await http.get(Uri.parse(url));
 
@@ -54,7 +54,7 @@ class TerrahubAPI {
     List<Client> clientList = [];
 
     String url =
-        'https://terrahub-production.up.railway.app/clientes/listaClientes';
+        'https://frontend-production.up.railway.app/clientes/listaClientes';
 
     http.Response response = await http.get(Uri.parse(url));
 
@@ -72,7 +72,7 @@ class TerrahubAPI {
     List<Employee> employeeList = [];
 
     String url =
-        'https://terrahub-production.up.railway.app/planillas/listaEmpleados';
+        'https://frontend-production.up.railway.app/planillas/listaEmpleados';
 
     http.Response response = await http.get(Uri.parse(url));
 
@@ -90,7 +90,7 @@ class TerrahubAPI {
     List<EstateType> typeList = [];
 
     String url =
-        'https://terrahub-production.up.railway.app/propiedades/tipoPropiedad';
+        'https://frontend-production.up.railway.app/propiedades/tipoPropiedad';
 
     http.Response response = await http.get(Uri.parse(url));
 
@@ -108,7 +108,7 @@ class TerrahubAPI {
     List<Sales> salesList = [];
 
     String url =
-        'https://terrahub-production.up.railway.app/contratos/listaVentasInmuebles';
+        'https://frontend-production.up.railway.app/contratos/listaVentasInmuebles';
 
     http.Response response = await http.get(Uri.parse(url));
 
@@ -126,7 +126,7 @@ class TerrahubAPI {
     List<Buys> buysList = [];
 
     String url =
-        'https://terrahub-production.up.railway.app/contratos/listaComprasInmuebles';
+        'https://frontend-production.up.railway.app/contratos/listaComprasInmuebles';
 
     http.Response response = await http.get(Uri.parse(url));
 
@@ -144,7 +144,7 @@ class TerrahubAPI {
     List<Request> buysList = [];
 
     String url =
-        'https://terrahub-production.up.railway.app/contratos/listaSolicitudesClientes';
+        'https://frontend-production.up.railway.app/contratos/listaSolicitudesClientes';
 
     http.Response response = await http.get(Uri.parse(url));
 
@@ -160,7 +160,7 @@ class TerrahubAPI {
 
   void registerEstate(Estate estate) async {
     var url = Uri.parse(
-        'https://terrahub-production.up.railway.app/propiedades/registrarPropiedad');
+        'https://frontend-production.up.railway.app/propiedades/registrarPropiedad');
     var data = estate.toJson();
     var response = await http.post(
       url,
@@ -178,7 +178,7 @@ class TerrahubAPI {
 
   void registerRequest(Request request) async {
     var url = Uri.parse(
-        'https://terrahub-production.up.railway.app/contratos/registrarSolicitudCliente');
+        'https://frontend-production.up.railway.app/contratos/registrarSolicitudCliente');
     var data = request.toJson();
     var response = await http.post(
       url,
@@ -196,7 +196,7 @@ class TerrahubAPI {
 
   void registerSales(Sales sales) async {
     var url = Uri.parse(
-        'https://terrahub-production.up.railway.app/contratos/registrarVentaInmueble');
+        'https://frontend-production.up.railway.app/contratos/registrarVentaInmueble');
     var data = sales.toJson();
     var response = await http.post(
       url,
@@ -214,7 +214,7 @@ class TerrahubAPI {
 
   void registerBuys(Buys buys) async {
     var url = Uri.parse(
-        'https://terrahub-production.up.railway.app/contratos/registrarCompraInmueble');
+        'https://frontend-production.up.railway.app/contratos/registrarCompraInmueble');
     var data = buys.toJson();
     var response = await http.post(
       url,

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/state_manager.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:terrahub/models/estate_model.dart';
-import 'package:terrahub/repositories/terrahub_api.dart';
-import 'package:terrahub/shared/routes.dart';
-import 'package:terrahub/styles/text_styles.dart';
-import 'package:terrahub/widgets/estate_row.dart';
-import 'package:terrahub/widgets/ink_buttons.dart';
+import 'package:frontend/models/estate_model.dart';
+import 'package:frontend/repositories/terrahub_api.dart';
+import 'package:frontend/shared/routes.dart';
+import 'package:frontend/styles/text_styles.dart';
+import 'package:frontend/widgets/estate_row.dart';
+import 'package:frontend/widgets/ink_buttons.dart';
 
 // ignore: must_be_immutable
 class EstatePage extends StatelessWidget {
